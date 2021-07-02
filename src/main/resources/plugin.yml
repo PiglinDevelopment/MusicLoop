@@ -1,0 +1,6 @@
+name: MusicLoop
+version: ${project.version}
+main: dev.piglin.musicloop.MusicLoop
+api-version: 1.17
+authors: [ Iaiao ]
+description: Adds background music to your server

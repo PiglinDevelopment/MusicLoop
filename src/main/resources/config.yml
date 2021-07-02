@@ -1,0 +1,29 @@
+# if a player has a musicloop.loop.admin_loop permission, they get admin_loop
+# else if the player has a musicloop.loop.player_loop permission, they get player_loop
+# else they don't get anything.
+loop priority:
+  - admin_loop
+  - player_loop
+
+loops:
+  admin_loop:
+    shuffle: on
+    tracks:
+      # <music identifier>: <duration in seconds>
+      "minecraft:music.loopmusic.admin.music_1": 60
+      "minecraft:music.loopmusic.admin.music_2": 20
+      "minecraft:music.loopmusic.admin.music_3": 35
+      "minecraft:music.loopmusic.admin.music_4": 40
+  player_loop:
+    shuffle: off
+    tracks:
+      "minecraft:music.loopmusic.player.music_1": 5
+      "minecraft:music.loopmusic.player.music_2": 15
+      "minecraft:music.loopmusic.player.music_3": 80
+      "minecraft:music.loopmusic.player.music_4": 120
+      "minecraft:music.loopmusic.player.music_5": 60
+
+# play the music immediately or wait for player to accept and load server resourcepack?
+resource pack: yes
+# stop default minecraft:music.* sounds?
+stop default music: yes
